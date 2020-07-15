@@ -1,0 +1,29 @@
+$zindex: (
+    above-all: 99,
+    under-above-all: 98,
+    above-header: 60,
+    header: 50,
+    under-header: 40,
+    above-section: 20,
+    section: 10,
+    under-section: 9,
+    base: 1,
+);
+
+$fontWeight: (
+    thin: 100,
+    light: 300,
+    normal: normal,
+    medium: 500,
+    bold: 500,
+);
+
+$breakpoints: (
+    max: 2000px,
+    large: 1600px,
+    widescreen: 1280px,
+    desktop: 1024px,
+    tablet: 768px,
+    phone: 545px,
+    phone-s: 360px,
+);

@@ -1,0 +1,94 @@
+/*
+* SPECIFIC BREAKPOINTS
+*/
+
+// from to 1280px to 1600px - 1px
+
+@mixin widescreen-only {
+    @media all and (min-width: map-get($breakpoints, widescreen)) and (max-width: map-get($breakpoints, large) - 1px) {
+        @content;
+    }
+}
+// from to 1024px to 1280px - 1px
+@mixin desktop-only {
+    @media all and (min-width: map-get($breakpoints, desktop)) and (max-width: map-get($breakpoints, widescreen) - 1px) {
+        @content;
+    }
+}
+
+// from to 768px to 1024px - 1px
+@mixin tablet-only {
+    @media all and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop) - 1px) {
+        @content;
+    }
+}
+
+// from to 545px to 769px - 1px
+@mixin phone-only {
+    @media all and (min-width: map-get($breakpoints, phone)) and (max-width: map-get($breakpoints, tablet) - 1px) {
+        @content;
+    }
+}
+
+// max to 544px
+@mixin phone-s-only {
+    @media all and (min-width: map-get($breakpoints, phone-s)) and (max-width: map-get($breakpoints, phone) - 1px) {
+        @content;
+    }
+}
+
+// max to 544px
+@mixin phone-xs-only {
+    @media all and (max-width: map-get($breakpoints, phone-s) - 1px) {
+        @content;
+    }
+}
+
+@mixin desktop-small-only {
+    @media all and (min-width: map-get($breakpoints, desktop)) and (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin widescreen-small-only {
+    @media all and (min-width: map-get($breakpoints, widescreen)) and (max-width: 1380px) {
+        @content;
+    }
+}
+/*
+* DEVICE BREAKPOINTS
+*/
+
+@mixin widescreen {
+    @media all and (min-width: map-get($breakpoints, widescreen)) {
+        @content;
+    }
+}
+
+// from 999px down (tablet & phone)
+@mixin touch {
+    @media all and (max-width: map-get($breakpoints, desktop) - 1px) {
+        @content;
+    }
+}
+
+// from 1000 up (computers)
+@mixin desktop {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+// from 678 up (computers)
+@mixin tablet {
+    @media all and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+// from 999px down (tablet & phone)
+@mixin phone {
+    @media all and (max-width: map-get($breakpoints, tablet) - 1px) {
+        @content;
+    }
+}

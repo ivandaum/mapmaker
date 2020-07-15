@@ -1,0 +1,53 @@
+.is-capitalize {
+    text-transform: capitalize;
+}
+
+.is-lowercase {
+    text-transform: lowercase;
+}
+
+.has-text-left {
+    text-align: left;
+}
+
+.has-text-right {
+    text-align: right;
+}
+
+.is-h1 {
+    font-size: calc(var(--size) * 3.5);
+    line-height: 1.25em;
+
+    @include tablet {
+        @include responsive-font(5vw, 16px, 160px);
+    }
+}
+
+.is-h2 {
+    font-size: calc(var(--size) * 2);
+    line-height: 1.25em;
+}
+
+.is-underline,
+.is-external {
+    border-bottom: 0.1rem solid var(--color-text);
+
+    &:hover {
+        border-color: var(--color-textLight);
+    }
+}
+.is-external {
+    margin-right: 0.4em;
+
+    &::after {
+        content: '→';
+        display: inline-block;
+        position: absolute;
+        transform: rotate(-45deg);
+        font-size: 0.5em;
+    }
+}
+
+.has-border-top {
+    border-top: 0.1rem solid var(--color-text);
+}

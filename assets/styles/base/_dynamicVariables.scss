@@ -1,0 +1,26 @@
+:root {
+    --color-text: #000;
+    --color-textLight: #959595;
+    --color-background: #fefefe;
+
+    --easing: cubic-bezier(0.59, 0.01, 0.4, 0.98);
+    --speed: 400ms;
+    --size: 1.6rem;
+    --padding: 3rem;
+    --font-family: 'Inter', Helvetica, Arial, sans-serif;
+    --vh: 1vh;
+}
+
+@include touch {
+    :root {
+        --padding: 1.5rem;
+        --size: 1rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #e0dfdf;
+        --color-background: #202224;
+    }
+}

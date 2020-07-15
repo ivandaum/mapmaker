@@ -1,0 +1,22 @@
+.is-baseline {
+    align-items: baseline;
+}
+
+.no-shrink {
+    flex-shrink: 0;
+}
+
+.is-justified {
+    &-x {
+        justify-content: space-between;
+    }
+}
+
+.is-center {
+    align-items: center;
+    justify-content: center;
+
+    &-y {
+        align-items: center;
+    }
+}

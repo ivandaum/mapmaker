@@ -1,0 +1,86 @@
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: none;
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::-moz-selection {
+    /* Code for Firefox */
+    color: var(--color-background);
+    background-color: var(--color-text);
+}
+
+*::selection {
+    color: var(--color-background);
+    background-color: var(--color-text);
+}
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-family: var(--font-family);
+    font-weight: 400;
+    overflow-y: scroll;
+
+    @include touch {
+        font-size: 1.4rem;
+    }
+}
+
+#app {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    height: auto;
+}
+
+body.locked #app {
+    height: calc(var(--vh) * 100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin: 0;
+    width: 100%;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    -webkit-appearance: none;
+    background-color: inherit;
+    padding: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}

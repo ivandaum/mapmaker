@@ -1,0 +1,48 @@
+.is-block {
+    display: block;
+}
+.is-inline-block {
+    display: inline-block;
+}
+
+.is-flex {
+    display: flex;
+}
+
+.is-absolute {
+    position: absolute;
+}
+.is-fixed {
+    position: fixed;
+}
+
+.is-wrap {
+    flex-wrap: wrap;
+}
+
+.is-relative {
+    position: relative;
+}
+
+.is-sticky {
+    top: 0;
+    position: sticky;
+}
+
+.is-hidden-desktop {
+    @include desktop {
+        display: none !important;
+    }
+}
+
+.is-hidden-touch {
+    @include touch {
+        display: none !important;
+    }
+}
+
+.is-hidden-phone {
+    @include phone {
+        display: none !important;
+    }
+}

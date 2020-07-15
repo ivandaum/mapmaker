@@ -1,0 +1,16 @@
+$directions: (top, left, bottom, right);
+$properties: (margin, padding);
+
+@for $i from 1 through 6 {
+    @each $prop in $properties {
+        @each $direction in $directions {
+            .is-#{$prop}-#{$direction}-#{$i} {
+                #{$prop}-#{$direction}: calc(var(--padding) * #{$i});
+            }
+        }
+
+        .is-#{$prop}-#{$i} {
+            #{$prop}: calc(var(--padding) * #{$i});
+        }
+    }
+}

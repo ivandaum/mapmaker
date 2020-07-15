@@ -1,0 +1,45 @@
+.is-column {
+    @for $i from 1 through 12 {
+        &.is-#{$i}-widescreen {
+            @include widescreen {
+                width: $i / 12 * 100%;
+            }
+        }
+
+        &.is-#{$i}-desktop {
+            @include desktop-only {
+                width: $i / 12 * 100%;
+            }
+        }
+
+        &.is-#{$i}-tablet {
+            @include tablet-only {
+                width: $i / 12 * 100%;
+            }
+        }
+
+        &.is-#{$i}-phone {
+            @include phone {
+                width: $i / 12 * 100%;
+            }
+        }
+
+        &.is-#{$i} {
+            @include desktop {
+                width: $i / 12 * 100%;
+            }
+        }
+
+        &.is-#{$i}-touch {
+            @include touch {
+                width: $i / 12 * 100%;
+            }
+        }
+
+        &.is-offset-#{$i} {
+            @include tablet {
+                margin-right: $i / 12 * 100%;
+            }
+        }
+    }
+}
